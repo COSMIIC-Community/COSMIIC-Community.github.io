@@ -14,8 +14,8 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="COSMIIC Documentation" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.53a7cbd4.css">
-<script src="/assets/js/runtime~main.dfb49842.js" defer="defer"></script>
-<script src="/assets/js/main.5c9a1657.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.c871566e.js" defer="defer"></script>
+<script src="/assets/js/main.e0a30fb1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDS2SC8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -38,9 +38,6 @@
 <p><strong>Bandpass Filter --</strong> A signal processing filter that extracts a specific frequency band from a recorded signal. Used in the BP2 module for EMG signal processing.</p>
 </li>
 <li class="">
-<p><strong>Battery Fuel Gauge --</strong> An integrated circuit that monitors the battery state and reports capacity, voltage, current, and cycle count.</p>
-</li>
-<li class="">
 <p><strong>Between Channel Timing --</strong> The configurable delay (default 1 ms) between stimulation pulses delivered on different channels within the same SYNC period.</p>
 </li>
 <li class="">
@@ -50,34 +47,19 @@
 <p><strong>Biphasic Waveform --</strong> A two-phase stimulation pulse consisting of a positive phase followed by a negative phase, designed to ensure charge balance and safe tissue stimulation.</p>
 </li>
 <li class="">
-<p><strong>BLE (Bluetooth Low Energy) --</strong> An optional wireless interface protocol supported by newer Wireless Link hardware for external device connectivity.</p>
-</li>
-<li class="">
 <p><strong>Bootloader --</strong> A special state of the microprocessor that enables a download of a new application program. The state is protected by safety interlocks. A bootloader program runs in a protected section of the microprocessor memory so that it cannot be modified or erased.</p>
 </li>
 <li class="">
 <p><strong>BP2 (Biopotential Recording Module) --</strong> A remote implanted module for recording myoelectric signals from 2 channels. The BP2 processes EMG signals used for neuroprosthetic control.</p>
 </li>
 <li class="">
-<p><strong>BUSA / BUSB --</strong> The two-conductor network bus lines on a development board frame. BUSA uses the top two pins and BUSB uses the bottom two pins; each requires a separate jumper connection.</p>
+<p><strong>CAN (Controller Area Network) --</strong> A low-level industry-standard network protocol used in the COSMIIC System.</p>
 </li>
 <li class="">
-<p><strong>CAN (Controller Area Network) --</strong> An industry-standard network protocol used in the COSMIIC System for low-latency, deterministic communication with robust error checking.</p>
-</li>
-<li class="">
-<p><strong>CAN-ID --</strong> The message identifier in the CAN protocol. For CANopen, the format combines a function code with the node ID (e.g., 600h + Node ID for an SDO client request).</p>
-</li>
-<li class="">
-<p><strong>CANopen --</strong> A set of specifications and protocols built on top of CAN that enables modular devices to communicate using a producer-consumer messaging model and a standardized Object Dictionary.</p>
-</li>
-<li class="">
-<p><strong>Charge Balance --</strong> The condition in which the positive and negative charge delivered by a biphasic stimulation pulse are equal and opposite, ensuring zero net charge delivery to tissue.</p>
+<p><strong>CANopen --</strong> A high-layer set of specifications and protocols built on top of CAN that enables modular devices to communicate using a producer-consumer messaging model and a standardized Object Dictionary.</p>
 </li>
 <li class="">
 <p><strong>COB-ID --</strong> The communication object identifier used to address PDO and SDO messages in CANopen.</p>
-</li>
-<li class="">
-<p><strong>Control Editor --</strong> A legacy Windows software application for COSMIIC System configuration and operation. It has been superseded by the NNP-API.</p>
 </li>
 <li class="">
 <p><strong>Control Tower (CT) --</strong> A formerly used external device that served as a gateway between a computer and the implanted system. Now obsolete. By convention, it was assigned node number 8.</p>
@@ -134,16 +116,7 @@
 <p><strong>JTAG --</strong> A hardware interface standard used for debugging and flashing firmware onto microcontrollers.</p>
 </li>
 <li class="">
-<p><strong>JST Connector --</strong> A standardized miniature connector type used for battery connections to the Power Module frame board.</p>
-</li>
-<li class="">
-<p><strong>Li-ion Battery / Lithium-ion Battery --</strong> The rechargeable battery type used in the Power Module, consisting of three cells connected in parallel.</p>
-</li>
-<li class="">
 <p><strong>Log / Logging --</strong> A data storage mechanism in the Power Module for recording system events and parameter values over time.</p>
-</li>
-<li class="">
-<p><strong>Log Cursor --</strong> The current write position within the Power Module&#x27;s log storage area.</p>
 </li>
 <li class="">
 <p><strong>LQI (Link Quality Indication) --</strong> A radio metric indicating the quality of the wireless link between the Wireless Link and the Power Module.</p>
@@ -153,9 +126,6 @@
 </li>
 <li class="">
 <p><strong>MATLAB --</strong> The programming environment used for developing custom applications with the NNP-API.</p>
-</li>
-<li class="">
-<p><strong>Mean Absolute Value --</strong> A signal processing metric computed by the BP2 module as part of its EMG signal processing pipeline.</p>
 </li>
 <li class="">
 <p><strong>MedRadio --</strong> A medical-grade radio frequency protocol operating at 433 MHz used for wireless communication between the Wireless Link and the implanted Power Module.</p>
@@ -176,10 +146,7 @@
 <p><strong>Network Port --</strong> A connection point on a module for attaching network cables.</p>
 </li>
 <li class="">
-<p><strong>Neuromodulation --</strong> The use of electrical stimulation to modulate nerve and/or muscle activity for therapeutic or research purposes.</p>
-</li>
-<li class="">
-<p><strong>Neuroprosthetics --</strong> Implanted or external devices that restore lost sensory or motor function through electrical stimulation and signal processing.</p>
+<p><strong>Neuroprosthetics --</strong> Implanted or external devices that restore lost sensory or motor function through electrical stimulation.</p>
 </li>
 <li class="">
 <p><strong>NNP (Networked Neuroprosthetic) System --</strong> An implantable neuromodulation system originally invented at Case Western Reserve University, now open source as the COSMIIC System</p>
@@ -198,9 +165,6 @@
 </li>
 <li class="">
 <p><strong>OD (Object Dictionary) --</strong> A standardized map of all accessible data and parameters across all network modules, addressed by a 16-bit index and an 8-bit sub-index.</p>
-</li>
-<li class="">
-<p><strong>OD Restore --</strong> A file containing Object Dictionary settings that can be applied to a module to restore its configuration to default values on bootup.</p>
 </li>
 <li class="">
 <p><strong>PDO (Process Data Object) --</strong> A CANopen broadcast mechanism for continuous or event-driven data transfer. Configured as either a Transmit PDO (TPDO) or Receive PDO (RPDO).</p>
@@ -245,16 +209,10 @@
 <p><strong>SDO (Service Data Object) --</strong> A CANopen request-response protocol for reading or writing individual Object Dictionary entries. More flexible but less efficient than PDOs.</p>
 </li>
 <li class="">
-<p><strong>Serial Port --</strong> The USB virtual serial port connection between a host computer and the Wireless Link, operating at 230400 baud.</p>
-</li>
-<li class="">
 <p><strong>Smart Charger --</strong> An external device that combines the Wireless Link and a charging coil into a single unit for simultaneously communicating with and charging the Power Module.</p>
 </li>
 <li class="">
 <p><strong>Stack Usage --</strong> A diagnostic metric reporting the memory utilization percentage for each of the 9 system tasks running on the Power Module.</p>
-</li>
-<li class="">
-<p><strong>Strain Relief --</strong> A protective feature at cable ends that provides mechanical stiffness and durability at the point of insertion into a module port.</p>
 </li>
 <li class="">
 <p><strong>Sub-Index / Subindex --</strong> An 8-bit address used to access a specific field within a multi-field Object Dictionary entry.</p>
@@ -287,11 +245,11 @@
 <p><strong>Wake Interval --</strong> The period at which the Power Module checks for incoming radio messages during Wake-on-Radio (WOR) mode, configurable from 14 to 255 ms (default 20 ms).</p>
 </li>
 <li class="">
-<p><strong>Wireless Link (WL) --</strong> The external radio interface device (Access Point) that connects a desktop computer to the implanted COSMIIC System via USB, enabling wireless communication with the Power Module.</p>
+<p><strong>Wireless Link (WL) --</strong> The external radio interface device (Access Point) that bridges to the implanted COSMIIC System through wireless communication with the Power Module.</p>
 </li>
 <li class="">
 <p><strong>WOR (Wake-on-Radio) --</strong> A low-power mode in which the Power Module periodically awakens to check for incoming radio messages, reducing power consumption at the cost of increased communication latency.</p>
 </li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/COSMIIC-Community/COSMIIC-Documentation/blob/main/docs/Advanced/Glossary.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-04-13T21:34:25.000Z" itemprop="dateModified">Apr 13, 2026</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/category/advanced-documentation"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Advanced Documentation</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Advanced/NMT"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">NMT Commands</div></a></nav></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="margin-bottom--sm"><img src="/img/Cosmiic_favicon-150x150.png" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width="75" height="75"><img src="/img/Cosmiic_favicon-150x150.png" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width="75" height="75"></div><div class="footer__copyright">Copyright © 2026 COSMIIC</div></div></div></footer></div>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/COSMIIC-Community/COSMIIC-Documentation/blob/main/docs/Advanced/Glossary.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-04-14T13:14:17.000Z" itemprop="dateModified">Apr 14, 2026</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/category/advanced-documentation"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Advanced Documentation</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Advanced/NMT"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">NMT Commands</div></a></nav></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="margin-bottom--sm"><img src="/img/Cosmiic_favicon-150x150.png" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width="75" height="75"><img src="/img/Cosmiic_favicon-150x150.png" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width="75" height="75"></div><div class="footer__copyright">Copyright © 2026 COSMIIC</div></div></div></footer></div>
 </body>
 </html>
