@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects and Applications – COSMIIC</title>
+<meta name="description" content="Development projects and application areas for the COSMIIC open-source implantable neuromodulation platform.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cosmiic.org/projects.html">
+<meta property="og:title" content="Projects and Applications – COSMIIC">
+<meta property="og:description" content="Development projects and application areas for the COSMIIC open-source implantable neuromodulation platform.">
+<meta property="og:image" content="https://cosmiic.org/assets/clinicaluser.JPG">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/cosmiic-favicon-150x150.png">
+<link rel="stylesheet" href="css/styles.css"></head>
+<body>
+
+<script src="js/header.js"></script>
+
+<main id="content">
+
+  <section class="page-hero">
+    <h1>Projects &amp; Applications</h1>
+  </section>
+
+  <!-- ── Development Projects ── -->
+  <section class="proj-section">
+    <h2 class="proj-section__title">Current Clinical Use</h2>
+
+    <!-- Clinical Trial -->
+    <div class="clinical-block">
+      <img class="clinical-block__img" src="assets/clinicaluser.JPG" alt="Clinical trial participant using the COSMIIC System" loading="lazy">
+      <span class="badge">Clinical Trial</span>
+      <p>The COSMIIC System's implantable modular approach has resulted in a multi-center clinical trial scheduled to start later in 2023, aiming to test and validate the sensing and control algorithms embedded in the COSMIIC platform to deliver Hand-Grasp functionality to spinal cord injured individuals.</p>
+      <p>This system represents a full-featured neuro-device already used in human studies under an Early Feasibility Study Investigational Device Exemption from the Food and Drug Administration (FDA) for spinal cord injury patients. Regulatory documents, test procedures, test results, and FDA interaction records will be shared with researchers as part of COSMIIC's open source commitment to help academic researchers navigate the IDE approval process.</p>
+    </div>
+
+    <!-- Upcoming Modules -->
+    <h2 class="proj-section__title">Upcoming Modules and Devices</h2>
+    <p class="proj-subsection__lead">New implantable remote modules and external wireless link will expand available tools for human research in bioelectronics, neuromodulation, and neuroprosthetics.</p>
+
+    <div class="module-grid">
+
+      <article class="module-card">
+        <div class="module-card__header">
+          <h4 class="module-card__acronym">Nova</h4>
+          <p class="module-card__role">High channel recording and stimulating module</p>
+        </div>
+        <ul>
+          <li>Uses Intan RHD2164 bio amplifier and 32-bit microcontroller for low power, low noise streaming of 64-channels spiking band power transmitted every 32ms</li>
+          <li>Spiking band power captures spiking activity with 2KSps sampling, 300Hz high pass filter, rectified and averaged over 32ms time bins</li>
+          <li>Firmware includes single unit mode streams via selected channels sampled at 30KSps to view single unit waveforms and closed-loop modulation example with programmable stimulation frequency, pulse width and amplitude</li>
+          <li>32-channel stimulation and recording version built with circuitry designed around two Intan RHS2116 bio amplifiers and stimulators, and 32-bit microcontroller</li>
+          <li>Charge-balanced stimulation up to 2.5 mA over 14V range (±7V)</li>
+        </ul>
+      </article>
+
+      <article class="module-card">
+        <div class="module-card__header">
+          <h4 class="module-card__acronym">Fusion</h4>
+          <p class="module-card__role">Remotely powered sensor module</p>
+        </div>
+        <ul>
+          <li>Module includes Network Data Interface to relay sensor information back to network</li>
+          <li>Microcontroller selects communication and power pathways and processes data from outlying sensor</li>
+          <li>Auxiliary Sensors consisting of 9-axis IMU and temperature sensor</li>
+          <li>Programmable switching between sensor communication protocols</li>
+          <li>Current monitoring detects failure conditions</li>
+        </ul>
+      </article>
+
+      <article class="module-card">
+        <div class="module-card__header">
+          <h4 class="module-card__acronym">Gamma</h4>
+          <p class="module-card__role">Electrical nerve conduction block module</p>
+        </div>
+        <ul>
+          <li>Delivers kilohertz frequency alternating current (KHFAC) for reversible electrical nerve block</li>
+          <li>Voltage- or current-controlled charge-balanced waveforms up to 20 kHz</li>
+          <li>Enables both up-regulation and down-regulation of the nervous system within a single implanted system</li>
+          <li>Allows precise tuning of waveform parameters to optimize therapeutic effect</li>
+          <li>Integrates nerve block with electrical stimulation for greater autonomy and control</li>
+        </ul>
+      </article>
+
+      <article class="module-card">
+        <div class="module-card__header">
+          <h4 class="module-card__acronym">Wireless Devices</h4>
+          <p class="module-card__role">External communication bridge</p>
+        </div>
+        <ul>
+          <li>Devices: Wireless Link, Smart Charger, Kickstart Charger, Wearable Surface Stimulator</li>
+          <li>Bridge the implanted COSMIIC Power Module to external sensors and controllers</li>
+          <li>Support wired protocols: USB, I2C, SPI, CAN</li>
+          <li>Support wireless protocols: WiFi, MedRadio</li>
+          <li>Enables use of off-the-shelf or purpose-built hardware as system inputs and outputs</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+
+</main>
+
+<script src="js/footer.js"></script>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

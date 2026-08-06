@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COSMIIC — Open Source Implantable Neuromodulation Platform</title>
+<meta name="description" content="The COSMIIC System is an open-source implantable neuromodulation platform for researchers and startups pursuing first-in-human studies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cosmiic.org/">
+<meta property="og:title" content="COSMIIC — Open Source Implantable Neuromodulation Platform">
+<meta property="og:description" content="The COSMIIC System is an open-source implantable neuromodulation platform for researchers and startups pursuing first-in-human studies.">
+<meta property="og:image" content="https://cosmiic.org/assets/future-system-2023-v2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/cosmiic-favicon-150x150.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<script src="js/header.js"></script>
+
+<main id="content">
+
+  <section class="hero">
+    <div class="hero__figure">
+      <img src="assets/future-system-2023-v2.png" width="1019" height="1600"
+           alt="Illustration of a person eating with a spoon, with COSMIIC modules and network cable shown implanted through the arm and torso">
+    </div>
+    <div>
+      <h1>What is the COSMIIC System?</h1>
+      <p> Now available as open source, the COSMIIC System is a 
+        no-strings-attached neuromodulation platform available 
+        for adoption by researchers and startups. The system can be
+        configured with existing stimulating and sensing modules or with new modules to support
+        unique research requirements. Uniquely, the design, documentation,
+        and regulatory precedence enable a speedy path through
+        benchtop, chronic animal, and first-in-human studies.</p>
+      <a class="btn-primary" href="#scroll_to_horizontal">Learn More</a>
+    </div>
+  </section>
+
+  <section class="rail-section" id="scroll_to_horizontal" aria-label="System modules">
+    <div class="rail-head">
+      <h2>The COSMIIC System</h2>
+      <p class="rail-hint">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M15 7l5 5-5 5"/></svg>
+        Scroll to follow the cable
+      </p>
+    </div>
+
+    <div class="rail" id="rail" tabindex="0" role="region" aria-label="Module specifications, scrolls horizontally">
+
+      <div class="stage">
+        <img class="stage__art" src="assets/module-chain-2024-no-labels.png" width="4000" height="903" alt="">
+
+        <article class="callout" style="left:22.5%;top:41%">
+          <div class="mcard">
+            <h3>Power Module</h3>
+            <ul><li>600 mAh Li-ion recharge</li><li>32-bit ARM-7</li><li>MedRadio</li>
+                <li>4 MB memory</li><li>Accelerometer</li><li>Thermistor</li></ul>
+            <a href="https://docs.cosmiic.org/Implantables/PM-Module">Learn more</a>
+          </div>
+        </article>
+
+        <article class="callout" style="left:35%;top:55%">
+          <div class="mcard">
+            <h3>Network Cable</h3>
+            <ul><li>2 conductor</li><li>Power &amp; communication</li>
+                <li>Controller Area Network (CAN) protocol</li></ul>
+            <a href="https://docs.cosmiic.org/Implantables/NetworkCable">Learn more</a>
+          </div>
+        </article>
+
+        <article class="callout" style="left:47.5%;top:31%">
+          <div class="mcard">
+            <h3>Pulse Generator Module</h3>
+            <ul><li>4 independent channels</li><li>0–256 µs</li><li>0–20 mA</li><li>1–50 Hz</li>
+                <li>Common anode</li><li>Accelerometer</li><li>Thermistor</li><li>8-bit AVR</li></ul>
+            <a href="https://docs.cosmiic.org/Implantables/PG4-Module">Learn more</a>
+          </div>
+        </article>
+
+        <article class="callout" style="left:64%;top:55%">
+          <div class="mcard">
+            <h3>Electrodes</h3>
+            <ul><li>Monopolar</li><li>Bipolar</li><li>Nerve cuff</li></ul>
+            <a href="https://docs.cosmiic.org/Implantables/Electrodes">Learn more</a>
+          </div>
+        </article>
+
+        <article class="callout" style="left:79%;top:27%">
+          <div class="mcard">
+            <h3>Biopotential Recording Device</h3>
+            <ul><li>2 independent channels</li><li>Myoelectric signals</li><li>Gain 150–7500</li>
+                <li>8-bit ADC resolution</li><li>2 kHz sampling</li>
+                <li>Software signal processing</li><li>8-bit AVR</li></ul>
+            <a href="https://docs.cosmiic.org/Implantables/BP2-Module">Learn more</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="future">
+        <p class="future__label">In development</p>
+        <article class="mcard">
+          <img class="mcard__img" src="assets/nova-module.png" alt="Nova Module" loading="lazy">
+          <h3>Nova Module</h3>
+          <ul><li>64 channel recording</li><li>32 channel stimulation</li></ul>
+          <a href="https://cosmiic.org/projects-applications/">Learn more</a>
+        </article>
+        <article class="mcard">
+          <img class="mcard__img" src="assets/fusion-module.png" alt="Fusion Module" loading="lazy">
+          <h3>Fusion Module</h3>
+          <ul><li>Remote powered inertial measurement unit</li></ul>
+          <a href="https://cosmiic.org/projects-applications/">Learn more</a>
+        </article>
+        <article class="mcard">
+          <img class="mcard__img" src="assets/gamma-module.png" alt="Gamma Module" loading="lazy">
+          <h3>Gamma Module</h3>
+          <ul><li>20 kHz electrical nerve block</li></ul>
+          <a href="https://cosmiic.org/projects-applications/">Learn more</a>
+        </article>
+        <article class="mcard">
+          <img class="mcard__img" src="assets/lifeline-module.png" alt="Lifeline" loading="lazy">
+          <h3>Lifeline</h3>
+          <ul><li>Health monitor</li><li>Sensorized cable</li></ul>
+          <a href="https://cosmiic.org/projects-applications/">Learn more</a>
+        </article>
+      </div>
+
+    </div>
+
+    <div class="rail-foot">
+      <div class="rail-progress"><i id="railProgress"></i></div>
+      <div class="rail-arrows">
+        <button type="button" id="railPrev" aria-label="Scroll modules left">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button type="button" id="railNext" aria-label="Scroll modules right">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to build with COSMIIC?</h2>
+    <p>No matter what stage your idea is at, there is something for you. Start with a skim of the documentation or forum. Introduce yourself on the forum, or if you're in stealth mode, email us at open_source@cosmiic.org</p>
+    <div class="cta__actions">
+      <a class="btn-primary" href="mailto:open_source@cosmiic.org">Contact Us</a>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/footer.js"></script>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
