@@ -40,7 +40,7 @@
   window.addEventListener('scroll', function () {
     var y = window.scrollY;
     if (y > lastY && y > 80) header.classList.add('hidden');
-    else header.classList.remove('hidden');
+    else if (y < 80) header.classList.remove('hidden');
     lastY = y;
   }, { passive: true });
 
