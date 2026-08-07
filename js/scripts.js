@@ -31,8 +31,10 @@
     wrapper.style.height = (section.offsetHeight + maxScroll()) + 'px';
   }
 
+  var dragging = false, startX = 0, startLeft = 0, moved = 0;
+
   function onPageScroll() {
-    if (!isDesktop()) return;
+    if (!isDesktop() || dragging) return;
     var scrolled = -wrapper.getBoundingClientRect().top;
     if (scrolled < 0) scrolled = 0;
     rail.scrollLeft = Math.min(scrolled, maxScroll());
@@ -43,28 +45,35 @@
   window.addEventListener('resize', function() { setWrapperHeight(); onPageScroll(); });
   setWrapperHeight();
 
-  // Click-and-drag
-  var dragging = false, startX = 0, startLeft = 0, moved = 0;
-  rail.addEventListener('pointerdown', function (e) {
-    if (e.pointerType === 'touch') return;
-    dragging = true; moved = 0; startX = e.clientX; startLeft = rail.scrollLeft;
-    rail.classList.add('dragging'); rail.setPointerCapture(e.pointerId);
-  });
-  rail.addEventListener('pointermove', function (e) {
+  // Click-and-drag — use document listeners instead of setPointerCapture so the
+  // browser delivers click events to the element under the cursor, not the rail.
+  function onDragMove(e) {
     if (!dragging) return;
     var dx = e.clientX - startX;
     moved = Math.max(moved, Math.abs(dx));
-    rail.scrollLeft = startLeft - dx;
-  });
-  function endDrag(e){
-    if (!dragging) return;
-    dragging = false; rail.classList.remove('dragging');
-    if (e.pointerId != null && rail.hasPointerCapture(e.pointerId)) rail.releasePointerCapture(e.pointerId);
+    if (moved > 10) rail.scrollLeft = startLeft - dx;
   }
-  rail.addEventListener('pointerup', endDrag);
-  rail.addEventListener('pointercancel', endDrag);
+
+  function onDragEnd() {
+    if (!dragging) return;
+    dragging = false;
+    rail.classList.remove('dragging');
+    document.removeEventListener('pointermove', onDragMove);
+    document.removeEventListener('pointerup', onDragEnd);
+    document.removeEventListener('pointercancel', onDragEnd);
+  }
+
+  rail.addEventListener('pointerdown', function (e) {
+    if (e.pointerType === 'touch') return;
+    dragging = true; moved = 0; startX = e.clientX; startLeft = rail.scrollLeft;
+    rail.classList.add('dragging');
+    document.addEventListener('pointermove', onDragMove);
+    document.addEventListener('pointerup', onDragEnd);
+    document.addEventListener('pointercancel', onDragEnd);
+  });
+
   rail.addEventListener('click', function (e) {
-    if (moved > 6) { e.preventDefault(); e.stopPropagation(); }
+    if (moved > 10) { e.preventDefault(); e.stopPropagation(); }
     moved = 0;
   }, true);
 
