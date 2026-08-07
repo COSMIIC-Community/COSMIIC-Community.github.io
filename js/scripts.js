@@ -16,17 +16,32 @@
     next.disabled = rail.scrollLeft >= max - EDGE;
   }
 
-  // Vertical wheel drives horizontal scroll; releases to the page at either end.
-  rail.addEventListener('wheel', function (e) {
-    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;   // native trackpad pan
-    var factor = e.deltaMode === 1 ? 18 : e.deltaMode === 2 ? rail.clientWidth : 1;
-    var delta = e.deltaY * factor;
-    if (!delta) return;
-    var max = maxScroll();
-    if ((delta < 0 && rail.scrollLeft <= EDGE) || (delta > 0 && rail.scrollLeft >= max - EDGE)) return;
-    e.preventDefault();
-    rail.scrollLeft += delta;
-  }, { passive: false });
+  // Wrap the section in a tall div so extra vertical scroll space maps to horizontal rail scroll.
+  // The section is made sticky in CSS, so it pins while the user scrolls through the extra space.
+  var section = document.querySelector('.rail-section');
+  var wrapper = document.createElement('div');
+  wrapper.className = 'rail-wrapper';
+  section.parentNode.insertBefore(wrapper, section);
+  wrapper.appendChild(section);
+
+  function isDesktop() { return window.innerWidth > 900; }
+
+  function setWrapperHeight() {
+    if (!isDesktop()) { wrapper.style.height = ''; return; }
+    wrapper.style.height = (section.offsetHeight + maxScroll()) + 'px';
+  }
+
+  function onPageScroll() {
+    if (!isDesktop()) return;
+    var scrolled = -wrapper.getBoundingClientRect().top;
+    if (scrolled < 0) scrolled = 0;
+    rail.scrollLeft = Math.min(scrolled, maxScroll());
+  }
+
+  window.addEventListener('scroll', onPageScroll, { passive: true });
+  window.addEventListener('load', function() { setWrapperHeight(); onPageScroll(); });
+  window.addEventListener('resize', function() { setWrapperHeight(); onPageScroll(); });
+  setWrapperHeight();
 
   // Click-and-drag
   var dragging = false, startX = 0, startLeft = 0, moved = 0;

@@ -193,6 +193,12 @@ img{max-width:100%;display:block}
 .module-card li::before{content:'';position:absolute;left:0;top:.55em;width:4px;height:4px;border-radius:50%;background:var(--teal-bright)}
 .module-card__intro{font-size:.9rem;line-height:1.65;color:rgba(255,255,255,.72);margin:0 0 .85rem}
 
+/* ---------- horizontal-scroll sticky section ---------- */
+.rail-wrapper{position:relative}
+@media(min-width:901px){
+  .rail-section{position:sticky;top:0}
+}
+
 /* ---------- small screens ---------- */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;padding-top:calc(60px + 2.5rem)}
