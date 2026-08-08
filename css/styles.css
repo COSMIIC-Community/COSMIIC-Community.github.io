@@ -102,6 +102,9 @@ img{max-width:100%;display:block}
   transition:background .18s}
 .mcard a:hover{background:var(--teal)}
 
+/* Mobile-only module card list (hidden on desktop, shown in place of chain artwork) */
+.mobile-modules{display:none}
+
 /* Trailing group: modules that aren't in the chain artwork */
 .future{display:flex;align-items:center;gap:clamp(1.25rem,2vw,2rem);
   padding-left:clamp(2.5rem,5vw,5rem);margin-left:clamp(2rem,4vw,4rem);
@@ -216,9 +219,10 @@ img{max-width:100%;display:block}
   .nav-toggle{display:block;margin-left:auto}
   .rail-arrows,.rail-hint{display:none}
   .rail{display:block;overflow-x:visible;cursor:auto;padding:0}
-  .stage{width:100%;height:auto;aspect-ratio:var(--chain-aspect);overflow-x:auto;margin-bottom:2rem}
-  .stage__art{position:static;height:100%;width:auto;min-width:900px;object-fit:contain}
-  .callout{position:static;width:auto;min-width:0;margin:0 clamp(1.25rem,5vw,3rem) 1.75rem}
+  .stage{display:none}
+  .mobile-modules{display:block}
+  .mobile-modules .mcard,.future .mcard{width:auto;margin:0 clamp(1.25rem,5vw,3rem) 1.75rem}
+  .mobile-modules .future__label{writing-mode:horizontal-tb;display:block;margin:0 clamp(1.25rem,5vw,3rem) 1rem}
   .future{display:block;height:auto;border-left:0;padding:0;margin:0}
   .future__label{writing-mode:horizontal-tb;display:block;margin:0 clamp(1.25rem,5vw,3rem) 1rem}
   .future .mcard{width:auto;margin:0 clamp(1.25rem,5vw,3rem) 1.75rem}
