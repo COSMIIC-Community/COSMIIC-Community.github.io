@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Links – COSMIIC</title>
+<meta name="description" content="COSMIIC – open source implantable devices">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cosmiic.org/landing">
+<meta property="og:title" content="COSMIIC Links">
+<meta property="og:image" content="https://cosmiic.org/assets/cosmiic-favicon-150x150.png">
+<link rel="canonical" href="https://cosmiic.org/landing">
+<link rel="icon" href="../assets/cosmiic-favicon-150x150.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+/* Landing-page additions only — variables, reset, header, and footer come from styles.css */
+
+body{display:flex;flex-direction:column;align-items:center}
+
+.landing-wrap{
+  flex:1;display:flex;flex-direction:column;align-items:center;width:100%;
+  padding-top:calc(clamp(68px,8vw,92px) + 2.75rem);
+}
+@media(max-width:900px){
+  .landing-wrap{padding-top:2.75rem}
+}
+
+.tagline{
+  font-family:"Outfit",sans-serif;font-size:1.5rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--glow);
+  margin-bottom:2rem;padding:0 1.25rem;text-align:center;
+}
+
+.links{
+  display:flex;flex-direction:column;align-items:center;
+  gap:.75rem;width:100%;max-width:420px;
+  padding:0 1.25rem 3rem;
+}
+
+.link-btn{
+  display:flex;align-items:center;gap:.9rem;
+  width:100%;padding:.95rem 1.25rem;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:12px;
+  font-family:"Outfit",sans-serif;font-size:1rem;font-weight:500;
+  letter-spacing:.02em;color:#fff;text-decoration:none;
+  transition:background .18s,border-color .18s,transform .15s;
+}
+.link-btn:hover,.link-btn:focus-visible{
+  background:rgba(74,177,145,.12);
+  border-color:var(--teal-bright);
+  transform:translateY(-2px);
+  outline:none;
+}
+.link-btn:active{transform:translateY(0)}
+.link-btn__icon{width:22px;height:22px;flex-shrink:0}
+.link-btn__label{flex:1;text-align:left}
+
+/* Make site-footer full-width inside flex body */
+.site-footer{width:100%}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="https://cosmiic.org">
+    <img class="brand-logo" src="../assets/cosmiic-basic-white.svg" alt="COSMIIC">
+  </a>
+</header>
+
+<div class="landing-wrap">
+
+  <p class="tagline">Links</p>
+
+  <nav class="links" aria-label="COSMIIC links">
+
+    <a class="link-btn" href="https://cosmiic.org">
+      <img class="link-btn__icon" aria-hidden="true" src="icons/generic-homepage.svg" alt="">
+      <span class="link-btn__label">Homepage</span>
+    </a>
+
+    <a class="link-btn" href="https://docs.cosmiic.org">
+      <img class="link-btn__icon" aria-hidden="true" src="icons/generic-blog.svg" alt="">
+      <span class="link-btn__label">Documentation</span>
+    </a>
+
+    <a class="link-btn" href="https://community.cosmiic.org">
+      <img class="link-btn__icon" aria-hidden="true" src="icons/generic-review.svg" alt="">
+      <span class="link-btn__label">Community</span>
+    </a>
+
+    <a class="link-btn" href="https://github.com/COSMIIC-Community">
+      <img class="link-btn__icon" aria-hidden="true" src="icons/github.svg" alt="">
+      <span class="link-btn__label">GitHub</span>
+    </a>
+
+    <a class="link-btn" href="https://www.linkedin.com/company/cosmiic/">
+      <img class="link-btn__icon" aria-hidden="true" src="icons/linkedin.svg" alt="">
+      <span class="link-btn__label">LinkedIn</span>
+    </a>
+
+  </nav>
+
+</div>
+
+
+</body>
+</html>
