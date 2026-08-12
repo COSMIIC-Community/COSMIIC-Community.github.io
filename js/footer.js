@@ -13,7 +13,7 @@
         'GitHub' +
       '</a>' +
     '</div>' +
-    '<p>Copyright &copy; <span id="copy-year"></span> COSMIIC</p>';
+    '<p>Copyright &copy; <span id="copy-year"></span> COSMIIC &nbsp;&middot;&nbsp; <a href="privacy.html" style="color:inherit;opacity:.7;text-decoration:none">Privacy</a></p>';
 
   var s = document.currentScript;
   s.parentNode.insertBefore(footer, s);
