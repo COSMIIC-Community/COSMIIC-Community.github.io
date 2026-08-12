@@ -164,7 +164,7 @@ img{max-width:100%;display:block}
   font-size:clamp(1.8rem,4.2vw,3.15rem);
   color:var(--glow);margin:0;letter-spacing:-.02em;line-height:1
 }
-.about-section{max-width:800px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,6vw,5rem)}
+.about-section{max-width:800px;margin:0 auto;padding:clamp(1.9rem,3.75vw,3rem) clamp(1.5rem,6vw,5rem)}
 .about-section + .about-section{border-top:1px solid var(--rule)}
 .about-section h2{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,2.8vw,2rem);color:var(--glow);margin:0 0 1.25rem;letter-spacing:-.01em}
 .about-section p{font-size:clamp(1rem,1.35vw,1.1rem);line-height:1.75;color:rgba(255,255,255,.85);margin:0 0 1.5rem}
