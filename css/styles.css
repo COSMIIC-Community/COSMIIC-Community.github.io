@@ -207,7 +207,7 @@ img{max-width:100%;display:block}
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;padding-top:calc(60px + 2.5rem)}
   .hero__figure{order:-1;max-width:290px}
-  .site-header{height:60px;padding:0 1.25rem;justify-content:center;position:relative}
+  .site-header{height:60px;padding:0 1.25rem;justify-content:center}
   .nav-toggle{position:absolute;right:1rem}
   .brand-logo{height:30px}
   .site-nav{position:fixed;top:60px;left:0;right:0;transform:none;
