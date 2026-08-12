@@ -208,7 +208,7 @@ img{max-width:100%;display:block}
   .hero{grid-template-columns:1fr;padding-top:calc(60px + 2.5rem)}
   .hero__figure{order:-1;max-width:290px}
   .site-header{height:60px;padding:0 1.25rem;justify-content:center}
-  .nav-toggle{position:absolute;right:1rem}
+  .nav-toggle{position:absolute;left:1rem}
   .brand-logo{height:30px}
   .site-nav{position:fixed;top:60px;left:0;right:0;transform:none;
     flex-direction:column;align-items:stretch;
@@ -217,7 +217,7 @@ img{max-width:100%;display:block}
   .site-nav.open{display:flex}
   .site-nav a{padding:.85rem 0;border-bottom:1px solid var(--rule)}
   .btn-contact{margin-top:0;text-align:left;padding:.85rem 0;border-bottom:1px solid var(--rule)}
-  .nav-toggle{display:block;margin-left:auto}
+  .nav-toggle{display:block}
   .rail-head,.rail-arrows,.rail-hint,.rail-foot{display:none}
   .rail-section{padding-top:clamp(2rem,4vw,3rem)}
   .rail{display:block;overflow-x:visible;cursor:auto;padding:0}

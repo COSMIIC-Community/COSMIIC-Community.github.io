@@ -22,7 +22,7 @@
   header.className = 'site-header';
   header.innerHTML =
     '<a class="brand" href="index.html"><img class="brand-logo" src="assets/cosmiic-basic-white.svg" alt="COSMIIC"></a>' +
-    '<button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>' +
+    '<button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>' +
     '<nav class="site-nav" id="primary-nav" aria-label="Primary">' +
       '<a href="about.html"' + (path.endsWith('about.html') ? ' aria-current="page"' : '') + '>About</a>' +
       '<a href="projects.html"' + (path.endsWith('projects.html') ? ' aria-current="page"' : '') + '>Projects and Applications</a>' +
