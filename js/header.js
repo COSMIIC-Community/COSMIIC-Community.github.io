@@ -28,7 +28,6 @@
       '<a href="projects.html"' + (path.endsWith('projects.html') ? ' aria-current="page"' : '') + '>Projects and Applications</a>' +
       '<a href="https://docs.cosmiic.org">Docs</a>' +
       '<a href="https://community.cosmiic.org">Forum</a>' +
-      '<a class="btn-contact" href="mailto:open_source@cosmiic.org">Contact</a>' +
     '</nav>';
 
   var s = document.currentScript;
